@@ -18,7 +18,22 @@ const btn = document.querySelector('[data-from-btn]')
 const crearTarea = (evento) => {
   evento.preventDefault();
   const input = document.querySelector('[data-from-input]')
-  console.log(input.value)
+  const valor = input.value
+  const lista = document.querySelector('[data-list]')
+  const tarea = document.createElement('li')
+  tarea.classList.add('card')
+  input.value= ''
+  // Backticks
+  const contenido = `
+    <div>
+    <i class="far fa-check-square icon"></i>
+    <span class="task">${valor}</span>
+    </div>
+    <i class="fas fa-trash-alt trashIcon icon"></i>
+  ` // HTML + JS
+  tarea.innerHTML = contenido
+  lista.appendChild(tarea) // Agregamos un hijo al elemento padre
+  console.log(contenido)
 }
 console.log(btn)
 
