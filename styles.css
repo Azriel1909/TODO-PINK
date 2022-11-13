@@ -1,17 +1,28 @@
+:root {
+  --background-oscuro: #0f0f0f;
+  --background-blanco: #FFFFFF;
+  --background-ceniza-claro: #F7F4F4;
+  --background-ceniza-medio: #D9D9D9;
+  --color-primario: #ff7396;
+  --button-call: #ff3366;
+  --fuente-ceniza-claro: #666666;
+  --fuente-ceniza-oscuro: #4F4C4C;
+  --planes-color-primario-claro:  #ff809f;
+  --planes-color-secundario: #9875ff;
+  --fuente-enlace: #7598ff;
+  --roboto: 'Roboto', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Dosis', sans-serif;
+  font-family: var(--roboto);
   font-size: 16px;
 }
 
 main {
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(62, 161, 219, 1) 11.2%,
-    rgba(93, 52, 236, 1) 100.2%
-  );
-  width: 100vw;
+  background: rgb(15,15,15);
+  background: linear-gradient(70deg, rgba(15,15,15,1) 36%, rgba(255,115,150,1) 36%);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -29,22 +40,26 @@ form {
 .mainCard {
   width: 40vw;
   border-radius: 25px;
-  background-color: #fff;
+  background-color: var(--background-blanco);
   padding: 25px;
 }
 
 .title {
-  font-family: 'Dosis', sans-serif;
+  font-family: var(--roboto);
   display: flex;
   justify-content: center;
   align-content: center;
   margin-bottom: 15px;
 }
 
+.title img {
+  width: 100px;
+}
+
 .inputForm {
   border: none;
   padding: 10px;
-  border: 1px solid #eee;
+  border: 1px solid var(--background-blanco);
   outline: none;
   width: 65%;
 }
@@ -55,11 +70,7 @@ form {
 
 .btnCreate {
   padding: 10px 15px;
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(62, 161, 219, 1) 11.2%,
-    rgba(93, 52, 236, 1) 100.2%
-  );
+  background-color: var(--color-primario);
   border: none;
   color: #fff;
   border-radius: 5px;
@@ -79,7 +90,7 @@ form {
 
 .card {
   width: 90%;
-  padding: 15px;
+  padding: 19px;
   box-shadow: 2px 4px 4px 4px rgba(71, 71, 71, 0.16);
   display: flex;
   flex-direction: row;
